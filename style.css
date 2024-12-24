@@ -1,0 +1,195 @@
+@charset "UTF-8";
+/*-------------GLOBALES-------------------
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*--Trabajo resolucion de 320 x 768 LOGIN--
+----------- Contenedor principal --------*/
+.sesionContainer {
+    width: 95%;
+    margin: 5px auto;
+    max-width: 410px;
+    background: #eb7a7a;
+    border-radius: 15px;
+}
+
+/*---------- Logotipo -------------- */
+.welcomeContainer{
+    /*
+    position: relative;
+    width: 60%;
+    bottom: 15rem;
+    left: 5rem;
+    */
+    width: 100%;
+    text-align: center;
+}
+
+.welcomeContainer img{
+    width: 40%;
+    border-radius: 150px;
+    padding: 10px;
+    /*position: relative;
+    max-width: 400px;
+    */
+}
+
+
+/*---------- Contenedor del formulario --------------*/
+.formContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+}
+
+/* Formulario de ingreso  */
+/* ------------- Primer Elemento email --------------*/
+
+.emailContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+.passwordContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.forgetContainer {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.forgetContainer a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.emailContainer label, .passwordContainer label {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #fff;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.emailContainer input {
+    width: 100%;
+    height: 42px;
+    border-radius: 15px;
+    border: 3px solid transparent;
+    font-size: 1rem;
+}
+.emailContainer input:focus {
+    border: 3px solid rgb(24, 99, 240);
+    outline: none;
+    box-shadow: 0.5px 0px 0.5px rgb(0, 0, 0);
+}
+
+.passwordContainer input {
+    width: 100%;
+    height: 42px;
+    border-radius: 15px;
+    border: 3px solid transparent;
+    font-size: 1rem;
+}
+.passwordContainer input:focus {
+    border: 3px solid rgb(24,99,240);
+    outline: none;
+    box-shadow: 0.5px 0px 0.5px rgba(0,0,0,0.8);
+}
+
+/*----- Icono de validación para el usuario y contraseña ------ */
+.loginValidacion {
+    position: absolute;
+    margin-top: 45px;
+    font-size: 1.4rem;
+    right: 40px;
+    opacity: 0;
+}
+
+.loginAdv {
+    width: 100%;
+    margin: 10px 0;
+    color: yellow;
+    text-align: center;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.loginAdv-activo {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+.formContainer button{
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+    border-style:dashed;
+    border-radius: 15px;
+    font-size: 17px;
+    margin: 30px 0;
+}
+
+
+/*--Validacion login--*/
+.loginForm-correcto .loginValidacion{
+    color: green;
+    opacity: 1;
+}
+.loginForm-incorrecto .loginValidacion{
+    color: red;
+    opacity: 1;
+}
+.loginForm-incorrecto input{
+    border: 3px solid red;
+}
+
+.loginForm-incorrecto input:focus {
+    border: 4px solid yellow;
+}
+
+
+/* Media Query - Responsive */
+@media screen and (min-width: 768px) {
+    body {
+        max-width: 1000px;
+    }
+    .sesionContainer {
+        display: flex;
+        flex-wrap: nowrap;
+        max-width: 768px;
+        width: 95%;
+    }
+
+    .welcomeContainer {
+        border-right: 3px solid #fff;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .welcomeContainer img {
+        width: 80%;
+        height: 80%;
+        border-radius: 50%;
+    }
+}

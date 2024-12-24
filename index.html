@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Sesión</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <!--contenedor principal-->
+    <section class="sesionContainer">
+        <!--Contenedor del formulario-->
+        <!--Logotipo de la empresa-->
+        <div class="welcomeContainer">
+            <img src="./assets/logoBulk.jpg" alt="logo compañia bulk">
+        </div>
+        <div class="formContainer">
+            <!--Formulario-->
+            <form action="" id="login" class="loginForm">
+                <!--Primer elemento del formulario-->
+                <div class="emailContainer" id="userContainer">
+                    <label for="email">Usuario</label>
+                    <input type="email" placeholder="pepito@gmail.com" name="user" class="emailContainer-input-error">
+                    <i class='bx bxs-x-circle loginValidacion' id="error"></i>
+                </div>
+                <!--Segundo Elemento del Formulario-->
+                <div class="passwordContainer" id="passwordContainer">
+                    <label for="password">Contraseña</label>
+                    <input type="password" placeholder="Escriba su contraseña" name="password">
+                    <i class='bx bxs-x-circle loginValidacion'></i>
+                    <p class="loginAdv" id="passwordAdv">Debe contener entre 6 y 12 digitos alfanumericos</p>   
+                </div>
+                <!--Boton submit-->
+                <button>Iniciar sesión</button>
+                <!--Pie para recuperar la contraseña-->
+                <div class="forgetContainer">
+                    <a href="#"> Olvide mi contraseña</a>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!--Script de JS-->
+    <script src="./main.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>    
+    </body>
+</html>
